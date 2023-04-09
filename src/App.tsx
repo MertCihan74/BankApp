@@ -8,42 +8,31 @@ function App(): any {
     <SafeAreaView style={styles.container}>
       <View>
         <View style={styles.card_container}>
-          <Text style={{alignSelf: 'center', fontSize: 28}}>Login</Text>
+          <Text style={styles.header}>Login</Text>
           <TextInput
             //label="A"
-            helperText="Please enter your name"
-            style={{width: 215, alignSelf: 'center'}}
+            placeholder="TCKN"
+            helperText="Please enter your TCKN"
+            style={styles.textstyle}
             variant="standard"
           />
           <TextInput
+            placeholder="Password"
             helperText="Please enter your password"
-            style={{width: 215, alignSelf: 'center'}}
+            style={styles.textstyle}
+            inputMode="numeric"
+            secureTextEntry={true}
             variant="standard"
           />
           <Button
             title="Enter"
-            style={{
-              alignSelf: 'center',
-              marginTop: 20,
-              backgroundColor: '#00bfff',
-              borderColor: 'gray',
-              borderWidth: 1,
-            }}
+            style={styles.button}
             onPress={() => Alert.alert('Selam')}
           />
-          <Text style={{marginTop: 10, alignSelf: 'center'}}>
-            Don't you have an account?
-          </Text>
+          <Text style={styles.text}>Don't you have an account?</Text>
           <Button
             title="Sign Up"
-            style={{
-              alignSelf: 'center',
-              marginTop: 10,
-              marginBottom: 10,
-              backgroundColor: '#00bfff',
-              borderColor: 'gray',
-              borderWidth: 1,
-            }}
+            style={styles.button}
             onPress={() => Alert.alert('Selam')}
           />
         </View>
@@ -61,14 +50,14 @@ function App(): any {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#add8e6',
+    backgroundColor: '#43C7D8',
     justifyContent: 'center',
     alignContent: 'center',
     padding: 55,
   },
   card_container: {
     alignContent: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#F3EBCD',
     // margin: 180,
     borderWidth: 1,
     borderRadius: 10,
@@ -76,6 +65,26 @@ const styles = StyleSheet.create({
   },
   card_body: {
     padding: 16,
+  },
+  textstyle: {
+    marginTop: 10,
+    alignSelf: 'center',
+  },
+  button: {
+    alignSelf: 'center',
+    marginTop: 10,
+    marginBottom: 10,
+    backgroundColor: '#00bfff',
+    borderColor: 'gray',
+    borderWidth: 1,
+  },
+  text: {
+    marginTop: 10,
+    alignSelf: 'center',
+  },
+  header: {
+    alignSelf: 'center',
+    fontSize: 28,
   },
 });
 
